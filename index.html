@@ -1,1 +1,78 @@
-temp
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Operation Mirage</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <header>
+    <h1>OPERATION MIRAGE</h1>
+    <nav>
+      <a href="/projects/">Tactical Case Logs</a>
+      <a href="/detection.html">Detection Engineering</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero">
+      <h2>Cybersecurity Portfolio</h2>
+      <p>This portfolio documents real-world adversary simulations and detection engineering.</p>
+    </section>
+
+    <section id="case-log">
+      <h3>Tactical Case Log</h3>
+      <h4>T1003 – OS Credential Dumping</h4>
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Event</th>
+            <th>Log</th>
+            <th>User</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>04/34 03:07</td>
+            <td>Sysmon</td>
+            <td>lsass.exe accessed via PROCESS2 handle</td>
+            <td>Administrator</td>
+          </tr>
+          <tr>
+            <td>04/24 03:04</td>
+            <td>Sysmon</td>
+            <td>Process: lsass.exe (PID 328)</td>
+            <td>Administrator</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="log-activity">
+      <h3>Log Activity</h3>
+      <div class="activity-grid">
+        <div class="stat-box"><strong>329</strong><br>Events</div>
+        <div class="stat-box"><strong>5</strong><br>Sources</div>
+        <div class="stat-box"><strong>22</strong><br>Hosts</div>
+      </div>
+
+      <div class="event-types">
+        <h4>Event Types</h4>
+        <div class="bar-label">4621</div>
+        <div class="bar" style="width: 90%"></div>
+        <div class="bar-label">4872</div>
+        <div class="bar" style="width: 95%"></div>
+        <div class="bar-label">104</div>
+        <div class="bar" style="width: 20%"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Powered by: Caldera, Sysmon, SIGMA, Splunk, Wazuh</p>
+  </footer>
+</body>
+</html>
