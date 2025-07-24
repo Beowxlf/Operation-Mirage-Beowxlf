@@ -21,34 +21,56 @@
 <body class="bg-gray-900 text-white">
   <div class="flex">
     <!-- Threat Feed -->
-    <aside class="w-80 bg-gray-800 p-4 text-sm border-r border-gray-700 h-screen hidden md:block overflow-y-auto">
+    <aside class="w-80 bg-gray-800 p-4 text-sm border-r border-gray-700 h-screen md:block hidden lg:block overflow-y-auto sticky top-0 relative">
       <h2 class="text-blue-400 font-semibold mb-4">Threat Feed</h2>
       <div id="threat-feed" class="space-y-2 text-green-300 font-mono"></div>
+      <div class="absolute bottom-0 left-0 w-full px-6 py-4 bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 text-left text-sm text-blue-300 font-semibold italic tracking-wide shadow-inner border-t border-gray-700">
+  <p class="leading-relaxed text-base pl-2">"Aspiring Detection Engineer.<br>Stay Curious. Stay Watchful.<br>Find What Hides.<br>Defend What Matters."</p>
+</div>
     </aside>
 
     <!-- Main Content -->
     <div class="flex-1">
-      <header class="bg-gray-800 px-6 py-4 flex justify-between items-center shadow-md">
-        <h1 class="text-3xl font-bold text-blue-400 tracking-wide">OPERATION MIRAGE</h1>
-        <nav class="space-x-6 text-sm font-semibold">
-          <a href="/projects/" class="text-white hover:text-blue-400">Tactical Case Logs</a>
-          <a href="/detection.html" class="text-white hover:text-blue-400">Detection Engineering</a>
-          <a href="/about.html" class="text-white hover:text-blue-400">About</a>
-          <a href="https://github.com/Beowxlf/Operation-Mirage-Beowxlf" target="_blank" class="text-white hover:text-blue-400">GitHub</a>
-          <a href="https://www.linkedin.com/in/beowxlf" target="_blank" class="text-white hover:text-blue-400">LinkedIn</a>
-        </nav>
-      </header>
+      <header class="bg-gray-800 px-6 py-4 flex justify-between items-center shadow-md sticky top-0 z-50">
+  <h1 class="text-3xl font-bold text-blue-400 tracking-wide">OPERATION MIRAGE</h1>
+  <button class="md:hidden text-white focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+    </svg>
+  </button>
+  <nav class="space-x-6 text-sm font-semibold hidden md:flex">
+    <a href="/projects/" class="text-white hover:text-blue-400">Tactical Case Logs</a>
+    <a href="/detection.html" class="text-white hover:text-blue-400">Detection Engineering</a>
+    <a href="https://github.com/Beowxlf/Operation-Mirage-Beowxlf" target="_blank" class="text-blue-400 hover:underline">GitHub</a>
+    <a href="https://www.linkedin.com/in/beowxlf" target="_blank" class="text-blue-400 hover:underline">LinkedIn</a>
+  </nav>
+</header>
+<div id="mobile-menu" class="md:hidden px-6 py-4 space-y-2 text-sm font-semibold bg-gray-800 hidden">
+  <a href="/projects/" class="block text-white hover:text-blue-400">Tactical Case Logs</a>
+  <a href="/detection.html" class="block text-white hover:text-blue-400">Detection Engineering</a>
+  <a href="https://github.com/Beowxlf/Operation-Mirage-Beowxlf" target="_blank" class="block text-blue-400 hover:underline">GitHub</a>
+  <a href="https://www.linkedin.com/in/beowxlf" target="_blank" class="block text-blue-400 hover:underline">LinkedIn</a>
+</div>
 
       <main class="px-6 py-10 max-w-6xl mx-auto">
         <!-- Hero Section -->
         <section class="text-center mb-12">
-          <h2 class="text-4xl font-extrabold mb-2 tracking-tight">Cybersecurity Portfolio</h2>
-          <p class="text-gray-300 text-lg">Real-world adversary simulations and detection engineering logs.</p>
-        </section>
+  <p class="text-4xl font-extrabold mb-2 tracking-tight text-white">Real-world adversary simulations and detection engineering logs.</p>
+  <h2 class="text-gray-300 text-lg">My Cybersecurity Portfolio</h2>
+  <hr class="mt-4 border-t border-gray-700 w-3/4 mx-auto opacity-40" />
+</section>
 
         <!-- Personal Showcasing Section -->
         <section class="mb-12">
-          <h3 class="text-2xl font-semibold mb-6">Professional Profile</h3>
+  <h3 class="text-2xl font-semibold mb-6"><span class="text-gray-500">01</span> &gt; About Me</h3>
+  <div class="bg-gray-800 rounded-lg shadow p-6 space-y-4">
+    <p><strong class="text-blue-300">Personal:</strong> My name is Brayden, and my path into cybersecurity started through a strong foundation in IT. For over a year, I’ve worked hands-on with users and networks, diagnosing problems and learning how systems break. That curiosity grew into a tactical mindset. I began exploring threat behavior, building a home lab, and studying SOC operations with the same discipline I bring to my hobbies. I was recently married in July — Linda and I share our life in Texas while I study at the University of Texas at San Antonio. Outside of tech, I train in Brazilian Jiu-Jitsu, run backpacking trips, and DM my own Dungeons & Dragons campaigns. I love structure, challenge, and the kind of creativity that lives inside constraints.</p>
+    <p><strong class="text-blue-300">Why Cybersecurity:</strong> I chose cybersecurity because I want to make an impact in the world by protecting others. I’m drawn to this field for both the challenge and the purpose. I want to defend systems, preserve trust, and keep people safe from adversarial threats. I thrive in environments where I can think tactically, act decisively, and build defenses that actually matter.</p>
+  </div>
+</section>
+
+<section class="mb-12">
+  <h3 class="text-2xl font-semibold mb-6"><span class="text-gray-500">02</span> &gt; Professional Profile</h3>
           <div class="bg-gray-800 rounded-lg shadow p-6 space-y-4">
             <p><strong class="text-blue-300">Mission Statement:</strong> I'm an entry-level cybersecurity professional with hands-on experience in real-world incident response, endpoint protection, and firewall policy enforcement. This portfolio is built to demonstrate my practical understanding of adversary behavior and how I apply structured detection and analysis methods in a home lab environment modeled after real SOC workflows.</p>
             <p><strong class="text-blue-300">Tools & Technologies:</strong> MITRE ATT&CK, Caldera, Sysmon, Wazuh, SIGMA, Splunk, NGINX, cloudflared, GitHub Actions, PowerShell, Wireshark.</p>
@@ -58,46 +80,55 @@
           </div>
         </section>
 
-        <!-- Case Log Section -->
         <section class="mb-12">
-          <h3 class="text-2xl font-semibold mb-4">Featured Tactical Case Log</h3>
-          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-            <div class="p-4 border-b border-gray-700">
-              <h4 class="text-lg font-semibold text-blue-300">T1003 – OS Credential Dumping</h4>
-            </div>
-            <table class="min-w-full text-sm text-left text-gray-300">
-              <thead class="bg-gray-700 text-white">
-                <tr>
-                  <th class="px-4 py-2">Time</th>
-                  <th class="px-4 py-2">Event</th>
-                  <th class="px-4 py-2">Log</th>
-                  <th class="px-4 py-2">User</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="border-t border-gray-700">
-                  <td class="px-4 py-2">04/34 03:07</td>
-                  <td class="px-4 py-2">Sysmon</td>
-                  <td class="px-4 py-2">lsass.exe accessed via PROCESS2 handle</td>
-                  <td class="px-4 py-2">Administrator</td>
-                </tr>
-                <tr class="border-t border-gray-700">
-                  <td class="px-4 py-2">04/24 03:04</td>
-                  <td class="px-4 py-2">Sysmon</td>
-                  <td class="px-4 py-2">Process: lsass.exe (PID 328)</td>
-                  <td class="px-4 py-2">Administrator</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
+  <h3 class="text-2xl font-semibold mb-6"><span class="text-gray-500">03</span> &gt; Sim Lab Arsenal</h3>
+  <div class="relative w-full overflow-hidden">
+    <div id="carousel" class="flex gap-6 animate-scroll whitespace-nowrap">
+      <div class="min-w-[250px] bg-gray-800 rounded-lg shadow p-4 text-center">
+        <img src="/assets/logos/caldera.png" alt="Caldera" class="h-12 mx-auto mb-2">
+        <p class="text-blue-300 text-sm">MITRE Caldera</p>
+      </div>
+      <div class="min-w-[250px] bg-gray-800 rounded-lg shadow p-4 text-center">
+        <img src="/assets/logos/sysmon.png" alt="Sysmon" class="h-12 mx-auto mb-2">
+        <p class="text-blue-300 text-sm">Sysmon</p>
+      </div>
+      <div class="min-w-[250px] bg-gray-800 rounded-lg shadow p-4 text-center">
+        <img src="/assets/logos/wazuh.png" alt="Wazuh" class="h-12 mx-auto mb-2">
+        <p class="text-blue-300 text-sm">Wazuh</p>
+      </div>
+      <div class="min-w-[250px] bg-gray-800 rounded-lg shadow p-4 text-center">
+        <img src="/assets/logos/splunk.png" alt="Splunk" class="h-12 mx-auto mb-2">
+        <p class="text-blue-300 text-sm">Splunk</p>
+      </div>
+      <div class="min-w-[250px] bg-gray-800 rounded-lg shadow p-4 text-center">
+        <img src="/assets/logos/nginx.png" alt="NGINX" class="h-12 mx-auto mb-2">
+        <p class="text-blue-300 text-sm">NGINX</p>
+      </div>
+      <div class="min-w-[250px] bg-gray-800 rounded-lg shadow p-4 text-center">
+        <img src="/assets/logos/cloudflared.png" alt="Cloudflared" class="h-12 mx-auto mb-2">
+        <p class="text-blue-300 text-sm">Cloudflared</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <!-- Recent Techniques -->
+<a href="#" class="block text-center text-sm text-blue-400 mt-6 hover:underline">Return to Top</a>
+
+<style>
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-scroll {
+  animation: scroll 40s linear infinite;
+}
+</style>
+<!-- Recent Techniques -->
         <section class="mb-12">
-          <h3 class="text-2xl font-semibold mb-6">Recent Techniques</h3>
+          <h3 class="text-2xl font-semibold mb-6"><span class="text-gray-500">04</span> &gt; Recent Techniques</h3>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <a href="/projects/t1059-powershell.html" class="block p-4 bg-gray-800 rounded-lg shadow hover:ring-2 hover:ring-blue-400">
-              <h4 class="text-lg font-bold text-blue-300">T1059 – PowerShell Execution</h4>
+              <h4 class="text-lg font-bold text-blue-300"><span class="text-gray-500">04</span> &gt; T1059 – PowerShell Execution</h4>
               <p class="text-gray-400 text-sm mt-1">Simulated download cradle and SIGMA detection of obfuscated command.</p>
             </a>
             <a href="/projects/t1071-c2.html" class="block p-4 bg-gray-800 rounded-lg shadow hover:ring-2 hover:ring-blue-400">
@@ -111,15 +142,15 @@
           </div>
         </section>
       <section class="mb-12">
-          <h3 class="text-2xl font-semibold mb-6">Mission Overlay</h3>
-          <div class="bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 p-6 rounded-lg text-sm text-gray-300">
-            <p class="mb-2">This site is not just a portfolio — it's an active simulation platform and showcase for detection engineering. Every section reflects a technique tested, a rule written, and a threat neutralized.</p>
-            <p class="mb-2">Use this space to assess how I break down adversary behavior, log telemetry, and build detection coverage from the ground up.</p>
-            <p>Each tactic is real, tested, and documented for public review.</p>
-          </div>
-        </section>
+  <h3 class="text-2xl font-semibold mb-6"><span class="text-gray-500">05</span> &gt; Mission Overlay</h3>
+  <div class="bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 p-6 rounded-lg text-sm text-gray-300">
+    <p class="mb-2">This section outlines my practical approach to cybersecurity: simulate real threats, collect telemetry, and build detection rules that would hold up in an actual SOC.</p>
+    <p class="mb-2">I rely on MITRE ATT&CK as a playbook and guide my detection engineering work by real-world adversary behavior. Logs are collected using Wazuh and Sysmon, with detections written in SIGMA and validated manually.</p>
+    <p>Each entry here represents lab-verified, technically sound workflows from simulation to rule deployment.</p>
+  </div>
+</section>
         <section class="mb-12">
-          <h3 class="text-2xl font-semibold mb-6">Visual Footprint</h3>
+          <h3 class="text-2xl font-semibold mb-6"><span class="text-gray-500">06</span> &gt; Visual Footprint</h3>
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             <img src="/assets/screenshots/overview.png" class="rounded shadow" alt="Overview Screenshot">
             <img src="/assets/screenshots/sysmon.png" class="rounded shadow" alt="Sysmon Logs">
@@ -137,6 +168,7 @@ $1
 
   <script>
     const feed = document.getElementById('threat-feed');
+    const isDesktop = window.matchMedia("(min-width: 768px)").matches;
     const events = [
       '[+] 03:10:42Z - T1059 PowerShell Detected on WIN10-ENG03',
       '[+] 03:10:11Z - T1003 Credential Dumping blocked on ENG-DC01',
@@ -159,14 +191,20 @@ $1
     ];
     let i = 0;
     setInterval(() => {
-      feed.innerHTML = '';
-      for (let j = 0; j < 2; j++) {
+      if (window.innerWidth >= 768) {
+        const sidebar = feed.parentElement;
+        const quoteHeight = 90;
+        const maxHeight = sidebar.offsetHeight - quoteHeight;
+        const maxItems = Math.floor(maxHeight / 24);
+        if (feed.children.length >= maxItems) {
+          feed.removeChild(feed.lastChild);
+        }
         const msg = document.createElement('div');
-        msg.textContent = allEvents[(i + j) % allEvents.length];
+        msg.textContent = events[i % events.length];
         msg.className = 'animate-flicker';
-        feed.appendChild(msg);
+        feed.prepend(msg);
+        i++;
       }
-      i = (i + 2) % allEvents.length;
     }, 3000);
   </script>
 </body>
