@@ -1,78 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Operation Mirage</title>
-  <link rel="stylesheet" href="/assets/styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-    <h1>OPERATION MIRAGE</h1>
-    <nav>
-      <a href="/projects/">Tactical Case Logs</a>
-      <a href="/detection.html">Detection Engineering</a>
-      <a href="/about.html">About</a>
+<body class="bg-gray-900 text-white font-sans">
+
+  <header class="bg-gray-800 px-6 py-4 flex justify-between items-center shadow-md">
+    <h1 class="text-2xl font-bold text-blue-400">OPERATION MIRAGE</h1>
+    <nav class="space-x-6 text-sm font-semibold">
+      <a href="/projects/" class="text-white hover:text-blue-400">Tactical Case Logs</a>
+      <a href="/detection.html" class="text-white hover:text-blue-400">Detection Engineering</a>
+      <a href="/about.html" class="text-white hover:text-blue-400">About</a>
     </nav>
   </header>
 
-  <main>
-    <section id="hero">
-      <h2>Cybersecurity Portfolio</h2>
-      <p>This portfolio documents real-world adversary simulations and detection engineering.</p>
+  <main class="px-6 py-10 max-w-6xl mx-auto">
+    <section class="text-center mb-12">
+      <h2 class="text-3xl font-bold mb-2">Cybersecurity Portfolio</h2>
+      <p class="text-gray-300">This portfolio documents real-world adversary simulations and detection engineering.</p>
     </section>
 
-    <section id="case-log">
-      <h3>Tactical Case Log</h3>
-      <h4>T1003 – OS Credential Dumping</h4>
-      <table>
-        <thead>
-          <tr>
-            <th>Time</th>
-            <th>Event</th>
-            <th>Log</th>
-            <th>User</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>04/34 03:07</td>
-            <td>Sysmon</td>
-            <td>lsass.exe accessed via PROCESS2 handle</td>
-            <td>Administrator</td>
-          </tr>
-          <tr>
-            <td>04/24 03:04</td>
-            <td>Sysmon</td>
-            <td>Process: lsass.exe (PID 328)</td>
-            <td>Administrator</td>
-          </tr>
-        </tbody>
-      </table>
+    <section class="mb-12">
+      <h3 class="text-xl font-semibold mb-4">Tactical Case Log</h3>
+      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+        <div class="p-4 border-b border-gray-700">
+          <h4 class="text-lg font-semibold text-blue-300">T1003 – OS Credential Dumping</h4>
+        </div>
+        <table class="min-w-full text-sm text-left text-gray-300">
+          <thead class="bg-gray-700 text-white">
+            <tr>
+              <th class="px-4 py-2">Time</th>
+              <th class="px-4 py-2">Event</th>
+              <th class="px-4 py-2">Log</th>
+              <th class="px-4 py-2">User</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-gray-700">
+              <td class="px-4 py-2">04/34 03:07</td>
+              <td class="px-4 py-2">Sysmon</td>
+              <td class="px-4 py-2">lsass.exe accessed via PROCESS2 handle</td>
+              <td class="px-4 py-2">Administrator</td>
+            </tr>
+            <tr class="border-t border-gray-700">
+              <td class="px-4 py-2">04/24 03:04</td>
+              <td class="px-4 py-2">Sysmon</td>
+              <td class="px-4 py-2">Process: lsass.exe (PID 328)</td>
+              <td class="px-4 py-2">Administrator</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
-    <section id="log-activity">
-      <h3>Log Activity</h3>
-      <div class="activity-grid">
-        <div class="stat-box"><strong>329</strong><br>Events</div>
-        <div class="stat-box"><strong>5</strong><br>Sources</div>
-        <div class="stat-box"><strong>22</strong><br>Hosts</div>
+    <section class="mb-12">
+      <h3 class="text-xl font-semibold mb-4">Log Activity</h3>
+      <div class="grid grid-cols-3 gap-4 mb-6">
+        <div class="bg-gray-800 p-4 rounded-lg text-center">
+          <div class="text-2xl font-bold text-blue-300">329</div>
+          <div class="text-gray-400">Events</div>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg text-center">
+          <div class="text-2xl font-bold text-blue-300">5</div>
+          <div class="text-gray-400">Sources</div>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg text-center">
+          <div class="text-2xl font-bold text-blue-300">22</div>
+          <div class="text-gray-400">Hosts</div>
+        </div>
       </div>
 
-      <div class="event-types">
-        <h4>Event Types</h4>
-        <div class="bar-label">4621</div>
-        <div class="bar" style="width: 90%"></div>
-        <div class="bar-label">4872</div>
-        <div class="bar" style="width: 95%"></div>
-        <div class="bar-label">104</div>
-        <div class="bar" style="width: 20%"></div>
+      <div>
+        <h4 class="text-md font-semibold text-blue-300 mb-2">Event Types</h4>
+        <div class="space-y-2">
+          <div class="text-sm">4621</div>
+          <div class="h-2 bg-blue-400 rounded" style="width: 85%"></div>
+
+          <div class="text-sm">4872</div>
+          <div class="h-2 bg-blue-400 rounded" style="width: 90%"></div>
+
+          <div class="text-sm">104</div>
+          <div class="h-2 bg-blue-400 rounded" style="width: 20%"></div>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>Powered by: Caldera, Sysmon, SIGMA, Splunk, Wazuh</p>
+  <footer class="bg-gray-800 text-center py-4 text-gray-400 text-sm">
+    Powered by Caldera, Sysmon, SIGMA, Splunk, Wazuh
   </footer>
 </body>
 </html>
