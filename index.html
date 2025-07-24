@@ -147,7 +147,12 @@ $1
       '[+] 03:05:12Z - LSASS memory read via handle access (PID 1128)',
       '[+] 03:04:03Z - Nmap scan sweep from 10.0.2.4 blocked by firewall',
       '[+] 03:03:15Z - New lateral movement attempt: WINRM seen from 10.0.2.10',
-      '[+] 03:02:37Z - WMI command execution attempt blocked (Event ID 4688)'
+      '[+] 03:02:37Z - WMI command execution attempt blocked (Event ID 4688)',
+      '[+] 03:01:25Z - Suspicious base64 string detected in PowerShell command',
+      '[+] 03:00:52Z - Regsvr32 LOLBAS activity triggered alert',
+      '[+] 02:59:33Z - Credential access from unknown administrator session',
+      '[+] 02:58:01Z - Malicious macro blocked in Word document from external sender',
+      '[+] 02:57:17Z - Suspicious outbound DNS request to known C2 domain'
     ];
     let i = 0;
     setInterval(() => {
@@ -155,7 +160,7 @@ $1
       msg.textContent = events[i % events.length];
       msg.className = 'animate-flicker';
       feed.prepend(msg);
-      if (feed.children.length > 10) feed.removeChild(feed.lastChild);
+      if (feed.children.length > 15) feed.removeChild(feed.lastChild);
       i++;
     }, 3000);
   </script>
