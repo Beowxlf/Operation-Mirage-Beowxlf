@@ -52,7 +52,7 @@
   <a href="https://www.linkedin.com/in/beowxlf" target="_blank" class="block text-blue-400 hover:underline">LinkedIn</a>
 </div>
 
-      <main class="px-6 py-10 max-w-6xl mx-auto">
+      <main id="main-content" class="px-6 py-10 max-w-6xl mx-auto relative">
         <!-- Hero Section -->
         <section class="text-center mb-12">
   <p class="text-4xl font-extrabold mb-2 tracking-tight text-white">Real-world adversary simulations and detection engineering logs.</p>
@@ -112,7 +112,11 @@
   </div>
 </section>
 
-<a href="#" class="block text-center text-sm text-blue-400 mt-6 hover:underline">Return to Top</a>
+<button id="scrollTopBtn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" class="fixed bottom-6 right-6 z-[9999] bg-blue-400 text-black rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-blue-300 transition-opacity opacity-0 pointer-events-none">
+  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M3.293 12.707a1 1 0 011.414 0L10 6.414l5.293 6.293a1 1 0 001.414-1.414l-6-6a1 1 0 00-1.414 0l-6 6a1 1 0 000 1.414z" clip-rule="evenodd" />
+  </svg>
+</button>
 
 <style>
 @keyframes scroll {
@@ -206,6 +210,14 @@ $1
         i++;
       }
     }, 3000);
-  </script>
+  window.addEventListener('scroll', () => {
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  if (window.scrollY > 300) {
+    scrollTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+  } else {
+    scrollTopBtn.classList.add('opacity-0', 'pointer-events-none');
+  }
+});
+</script>
 </body>
 </html>
